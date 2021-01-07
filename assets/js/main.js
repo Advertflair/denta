@@ -46,6 +46,7 @@ function setWidth(element) {
 }
 let tabSlider = new Swiper(".tab-slider", {
   simulateTouch: false,
+  speed: 2000,
   mousewheel: {
     releaseOnEdges: true,
   },
@@ -81,4 +82,13 @@ listItem.forEach((item, index) => {
 // Animate on Scroll
 AOS.init({
   once: true,
+});
+
+// Tab Slider Fix
+let tbSlider = document.querySelector(".tab-slider");
+let sliderFix = tbSlider.offsetTop - 220;
+window.addEventListener("scroll", () => {
+  if (scrollY >= sliderFix) {
+    tbSlider.classList.add("tab-slide-active");
+  }
 });
