@@ -87,12 +87,7 @@ a {
   position: relative;
   margin: 40px 0 0;
 }
-.tab-slider {
-  pointer-events: none;
-}
-.tab-slider.tab-slide-active {
-  pointer-events: all !important;
-}
+
 .tab-items li {
   cursor: pointer;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.08),
@@ -186,8 +181,8 @@ nav .btn:hover {
 /* Banner */
 .banner {
   align-items: center;
-  height: 100vh;
-  padding: 60px;
+  /* height: 100vh; */
+  padding: 150px 60px 60px;
 }
 .banner .left-content {
   flex-basis: 60%;
@@ -328,6 +323,12 @@ nav .btn:hover {
 /* .perio-col {
   margin: 90px 0 0;
 } */
+.section-3 .tab-slider {
+  pointer-events: none;
+}
+.action-play {
+  pointer-events: all !important;
+}
 .perio-col .panel img {
   width: 40%;
 }
@@ -387,6 +388,149 @@ footer li {
 .copyrights {
   background-color: #1f2734;
   margin: 0;
+}
+/* Product Page */
+.headline {
+  height: 70vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 200px;
+  background-image: url(../images/right-triangle.svg),
+    url(../images/sec-2-left.svg);
+  background-position: 113% 80%, -5% 100%;
+  background-repeat: no-repeat;
+  background-size: 21%, 10%;
+}
+.headline h1 {
+  margin: 0;
+}
+
+.headline p {
+  margin: 30px 0;
+}
+.gradient-btn {
+  background: rgb(62, 195, 178);
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 224, 198),
+    rgb(50, 185, 161),
+    rgb(30, 197, 150),
+    rgb(53, 126, 104)
+  );
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+.gradient-btn:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+.grad-play-btn {
+  align-items: center;
+  background: rgb(62, 195, 178);
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 224, 198),
+    rgb(50, 185, 161),
+    rgb(30, 197, 150),
+    rgb(53, 126, 104)
+  );
+  color: #ffffff;
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+.grad-play-btn::before {
+  content: "";
+  background-image: url(../images/play-button.png);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.grad-play-btn .text {
+  padding: 0 0 0 50px;
+  display: inline-block;
+}
+.overall-prod .play-btn {
+  display: none;
+}
+.grad-play-btn img {
+  width: 15%;
+}
+.grad-play-btn:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+.overall-prod {
+  margin: 60px 0 0 0;
+  align-items: center;
+}
+.right-prod {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+.left-prod {
+  flex-basis: 40%;
+  margin: 0 40px 0 0;
+}
+.left-prod h2 b {
+  font-weight: 400;
+}
+.left-prod figure {
+  margin: 50px 0;
+}
+.left-prod figure img {
+  width: 30%;
+}
+.left-prod h2 span {
+  color: #20b0a9;
+}
+.right-prod {
+  flex-basis: 60%;
+}
+.right-prod .cards {
+  margin: 0 35px 35px 0;
+  flex-basis: 45%;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.08),
+    0 0 1px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+}
+.right-prod .cards:nth-child(even) {
+  margin-right: 0;
+}
+.right-prod .cards:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 224, 198),
+    rgb(50, 185, 161),
+    rgb(30, 197, 150),
+    rgb(53, 126, 104)
+  );
+}
+
+.right-prod .cards:hover * {
+  color: #ffffff;
+}
+.right-prod .cards p {
+  color: #919aa3;
+  font-size: 14px;
+}
+.right-prod .cards h4 {
+  font-weight: 300;
+  color: #1f2734;
 }
 /* Responsive */
 @media (max-width: 991px) {
