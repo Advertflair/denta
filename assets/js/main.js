@@ -6,6 +6,11 @@ let dentSwiper = new Swiper(".open-dental-overall", {
   },
 });
 
+// Animate on Scroll
+AOS.init({
+  once: true,
+});
+
 // Burger Menus
 let menu = document.querySelector(".menu-lines");
 let menuSec = document.querySelector(".overall-menus");
@@ -51,6 +56,10 @@ let tabSlider = new Swiper(".tab-slider", {
     releaseOnEdges: true,
   },
 });
+
+window.addEventListener("aos:out", (e) => {
+  console.log(e);
+});
 tabSlider.on("slideChange", function (innerMethods) {
   RemoveActive();
   let currentElement = listItem[innerMethods.activeIndex];
@@ -79,16 +88,13 @@ listItem.forEach((item, index) => {
   });
 });
 
-// Animate on Scroll
-AOS.init({
-  once: true,
-});
-
 // Tab Slider Fix
-let tbSlider = document.querySelector(".tab-slider");
+let tbSlider = document.querySelector(".section-3 .tab-slider");
 let sliderFix = tbSlider.offsetTop - 220;
 window.addEventListener("scroll", () => {
-  if (scrollY >= sliderFix) {
-    tbSlider.classList.add("tab-slide-active");
+  if (tbSlider.classList.contains("aos-animate")) {
+    setTimeout(() => {
+      tbSlider.classList.add("action-play");
+    }, 3000);
   }
 });
