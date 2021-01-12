@@ -52,16 +52,16 @@ function setWidth(element) {
 let tabSlider = new Swiper(".tab-slider", {
   simulateTouch: false,
   speed: 2000,
-  mousewheel: {
-    releaseOnEdges: true,
-  },
+  slidesPerView: 1,
+  mousewheel: true,
+  // mousewheel: {
+  //   releaseOnEdges: true,
+  // },
 });
 
-window.addEventListener("aos:out", (e) => {
-  console.log(e);
-});
 tabSlider.on("slideChange", function (innerMethods) {
   RemoveActive();
+  console.log(innerMethods.activeIndex);
   let currentElement = listItem[innerMethods.activeIndex];
   currentElement.classList.add("active");
   setWidth(currentElement);
