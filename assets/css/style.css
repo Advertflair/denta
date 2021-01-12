@@ -182,7 +182,7 @@ nav .btn:hover {
 .banner {
   align-items: center;
   /* height: 100vh; */
-  padding: 150px 60px 60px;
+  padding: 250px 60px 60px;
 }
 .banner .left-content {
   flex-basis: 60%;
@@ -328,6 +328,12 @@ nav .btn:hover {
 }
 .action-play {
   pointer-events: all !important;
+}
+.perio-col {
+  background: url(../images/curve-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .perio-col .panel img {
   width: 40%;
