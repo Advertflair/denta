@@ -50,10 +50,14 @@ function setWidth(element) {
   dash.style.left = element.offsetLeft + "px";
 }
 let tabSlider = new Swiper(".tab-slider", {
-  simulateTouch: false,
-  speed: 2000,
+  speed: 800,
   slidesPerView: 1,
-  mousewheel: true,
+  allowTouchMove: false,
+
+  // mousewheel: true,
+  // autoScrollOffset: 2,
+  // initialSlide: 1,
+
   // mousewheel: {
   //   releaseOnEdges: true,
   // },
@@ -61,11 +65,11 @@ let tabSlider = new Swiper(".tab-slider", {
 
 tabSlider.on("slideChange", function (innerMethods) {
   RemoveActive();
-  console.log(innerMethods.activeIndex);
   let currentElement = listItem[innerMethods.activeIndex];
   currentElement.classList.add("active");
   setWidth(currentElement);
 });
+
 let allSwipersTab = document.querySelectorAll(".swiper-slide");
 // Active Setters
 setWidth(listItemActive);
@@ -90,7 +94,7 @@ listItem.forEach((item, index) => {
 
 // Tab Slider Fix
 let tbSlider = document.querySelector(".section-3 .tab-slider");
-let sliderFix = tbSlider.offsetTop - 220;
+let sliderFix = tbSlider.offsetTop;
 window.addEventListener("scroll", () => {
   if (tbSlider.classList.contains("aos-animate")) {
     setTimeout(() => {
