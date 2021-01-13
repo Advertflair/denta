@@ -99,6 +99,9 @@ a {
   z-index: 22;
   border-radius: 10px;
 }
+.tab-items li:last-of-type {
+  margin: 0;
+}
 .dash {
   position: absolute;
   left: 0;
