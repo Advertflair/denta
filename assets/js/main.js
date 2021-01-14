@@ -119,3 +119,13 @@ accordionTab.each(function (index, ele) {
 });
 
 // Video
+$(".see-action").click(function () {
+  $(".video-overlay").fadeToggle();
+  $(".popup-container").fadeToggle();
+  $(".denta-video").get(0).play();
+});
+$(".close").click(function () {
+  $(".video-overlay").fadeOut();
+  $(".popup-container").fadeOut();
+  $(".denta-video").get(0).pause();
+});
