@@ -62,7 +62,7 @@ let tabSlider = new Swiper(".tab-slider", {
   //   releaseOnEdges: true,
   // },
 });
-
+// let tabAccord = new Swiper(".accordion-sec .tab-slider", {});
 tabSlider.on("slideChange", function (innerMethods) {
   RemoveActive();
   let currentElement = listItem[innerMethods.activeIndex];
@@ -93,12 +93,29 @@ listItem.forEach((item, index) => {
 });
 
 // Tab Slider Fix
-let tbSlider = document.querySelector(".section-3 .tab-slider");
-let sliderFix = tbSlider.offsetTop;
-window.addEventListener("scroll", () => {
-  if (tbSlider.classList.contains("aos-animate")) {
-    setTimeout(() => {
-      tbSlider.classList.add("action-play");
-    }, 3000);
-  }
+// let tbSlider = document.querySelector(".section-3 .tab-slider");
+// let sliderFix = tbSlider.offsetTop;
+// window.addEventListener("scroll", () => {
+//   if (tbSlider.classList.contains("aos-animate")) {
+//     setTimeout(() => {
+//       tbSlider.classList.add("action-play");
+//     }, 3000);
+//   }
+// });
+
+// Accordion
+let accordionTab = $(".accordion .accordion-title");
+accordionTab.each(function (index, ele) {
+  $(ele).click(function (e) {
+    $(ele).toggleClass("active");
+    $(ele).parent().find(".accordion-copy").slideToggle();
+    console.log($(ele).parent().find(".accordion-copy"));
+    if ($(ele).hasClass("active")) {
+      $(ele).parent().find("img").attr("src", "./assets/images/minus.svg");
+    } else {
+      $(ele).parent().find("img").attr("src", "./assets/images/add.svg");
+    }
+  });
 });
+
+// Video
