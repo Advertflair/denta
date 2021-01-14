@@ -99,8 +99,6 @@
           </div>
         </div>
         <div class="right-img">
-          <!-- <div class="left-convo convo">Hey Denta!</div>
-          <div class="right-convo convo">Now Listening</div> -->
           <figure
             data-aos="fade-in"
             data-aos-delay="3000"
@@ -114,7 +112,21 @@
       </div>
     </header>
     <!-- Header Ends -->
-
+    <!-- Video Popup -->
+    <div class="video-overlay"></div>
+    <div class="popup-container">
+      <div class="inner-pop">
+        <video controls width="500" class="denta-video">
+          <source src="./assets/images/action.mp4" type="video/mp4" />
+          <source src="mov_bbb.ogg" type="video/ogg" />
+          Your browser does not support HTML video.
+        </video>
+        <figure class="close">
+          <img src="./assets/images/close.svg" alt="close" />
+        </figure>
+      </div>
+    </div>
+    <!--  -->
     <!-- Section 2 Starts -->
     <section class="text-center section-2 section-spacing">
       <h2
@@ -412,6 +424,7 @@
       @copyright 2020 Voice Dental
     </p>
     <!--  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/lib/swiper.min.js"></script>
     <script src="./assets/js/main.js"></script>
