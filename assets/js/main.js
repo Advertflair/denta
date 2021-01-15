@@ -1,10 +1,6 @@
+let windowWidth = window.innerWidth;
+
 // Open Dental Slider
-let dentSwiper = new Swiper(".open-dental-overall", {
-  pagination: {
-    el: ".open-dental-overall .swiper-pagination",
-    clickable: true,
-  },
-});
 
 // Animate on Scroll
 AOS.init({
@@ -53,6 +49,7 @@ function setWidth(element) {
     dash.style.top = element.offsetTop + "px";
   }
 }
+
 let tabSlider = new Swiper(".tab-slider", {
   speed: 800,
   slidesPerView: 1,
@@ -74,7 +71,9 @@ tabSlider.on("slideChange", function (innerMethods) {
   currentElement.classList.add("active");
   setWidth(currentElement);
 });
-
+if (windowWidth <= 767) {
+  tabSlider.destroy();
+}
 let allSwipersTab = document.querySelectorAll(".swiper-slide");
 // Active Setters
 setTimeout(() => {
@@ -118,12 +117,11 @@ accordionTab.each(function (index, ele) {
     console.log(tabSlider);
     $(ele).toggleClass("active");
     $(ele).parent().find(".accordion-copy").slideToggle();
-
+    setTimeout(function () {
+      tabSlider.update();
+    }, 500);
     if ($(ele).hasClass("active")) {
       $(ele).parent().find("img").attr("src", "./assets/images/minus.svg");
-      setTimeout(function () {
-        tabSlider.update();
-      }, 500);
     } else {
       $(ele).parent().find("img").attr("src", "./assets/images/add.svg");
     }
