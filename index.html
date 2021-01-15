@@ -89,7 +89,10 @@
             data-aos-delay="2000"
           >
             <a href="javascript:void(0)" class="btn gt-started">GET STARTED </a>
-            <a href="javascript:void(0)" class="btn see-action d-flex"
+            <a
+              href="javascript:void(0)"
+              class="btn see-action d-flex video-btn"
+              data-id="digital-voice"
               ><span class="play-btn"
                 ><img
                   src="./assets/images/play-button.png"
@@ -113,19 +116,25 @@
     </header>
     <!-- Header Ends -->
     <!-- Video Popup -->
-    <div class="video-overlay"></div>
-    <div class="popup-container">
-      <div class="inner-pop">
-        <video controls width="500" class="denta-video">
-          <source src="./assets/images/action.mp4" type="video/mp4" />
-          <source src="mov_bbb.ogg" type="video/ogg" />
-          Your browser does not support HTML video.
-        </video>
-        <figure class="close">
-          <img src="./assets/images/close.svg" alt="close" />
-        </figure>
+    <div class="home-page-video">
+      <div class="video-overlay" data-id="digital-voice"></div>
+      <div class="popup-container" data-id="digital-voice">
+        <div class="inner-pop">
+          <video controls width="500" class="denta-video">
+            <source src="./assets/images/action.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <figure class="close">
+            <img
+              src="./assets/images/close.svg"
+              alt="close"
+              data-id="digital-voice"
+            />
+          </figure>
+        </div>
       </div>
     </div>
+
     <!--  -->
     <!-- Section 2 Starts -->
     <section class="text-center section-2 section-spacing">
