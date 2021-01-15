@@ -9,7 +9,11 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/lib/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/lib/swiper.min.css"
+      media="only screen and (min-width: 736px)"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -86,7 +90,7 @@
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-offset="0"
-            data-aos-delay="2000"
+            data-aos-delay="1000"
           >
             <a href="javascript:void(0)" class="btn gt-started">GET STARTED </a>
             <a
@@ -104,12 +108,12 @@
         <div class="right-img">
           <figure
             data-aos="fade-in"
-            data-aos-delay="3000"
+            data-aos-delay="1000"
             data-aos-duration="1000"
             data-aos-easing="linear"
             data-aos-offset="0"
           >
-            <img src="./assets/images/banner-anime.gif" alt="banner" />
+            <img src="./assets/images/hey-denta.png" alt="banner" />
           </figure>
         </div>
       </div>
@@ -142,7 +146,7 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-offset="0"
-        data-aos-delay="500"
+        data-aos-delay="1000"
       >
         Works With Your Open Dental<br />
         Practice Management System
@@ -164,23 +168,9 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-offset="0"
-        data-aos-delay="1500"
+        data-aos-delay="1000"
       >
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="./assets/images/open-dental.png"
-              alt="Open Dental"
-              title="Open Dental"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="./assets/images/open-dental.png"
-              alt="Open Dental"
-              title="Open Dental"
-            />
-          </div>
           <div class="swiper-slide">
             <img
               src="./assets/images/open-dental.png"
@@ -198,7 +188,7 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-offset="0"
-        data-aos-delay="2000"
+        data-aos-delay="1000"
       >
         OPEN DENTAL. IN REAL-TIME
       </p>
@@ -206,7 +196,7 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-offset="0"
-        data-aos-delay="2500"
+        data-aos-delay="1000"
       >
         * Coming soon on other PMS platforms.
       </p>
@@ -242,7 +232,7 @@
         data-aos-delay="2500"
       >
         <ul class="tab-items d-flex">
-          <li class="active">Perio Exam</li>
+          <li class="active">Periodontal Exam</li>
           <li>Voice Notes</li>
           <li>Charting</li>
         </ul>
@@ -267,7 +257,7 @@
                     title="Perio Exam"
                   />
                 </figure>
-                <h4>Perio Exam</h4>
+                <h4>Periodontal Exam</h4>
                 <p>
                   Hygenists can perform perio-exam in under 5 mins without any
                   assistance.
@@ -437,5 +427,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/lib/swiper.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+      let dentSwiper = new Swiper(".open-dental-overall", {
+        pagination: {
+          el: ".open-dental-overall .swiper-pagination",
+          clickable: true,
+        },
+      });
+      dentSwiper.destroy();
+    </script>
   </body>
 </html>
