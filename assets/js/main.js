@@ -47,12 +47,17 @@ let dash = document.querySelector(".dash");
 
 function setWidth(element) {
   dash.style.width = element.clientWidth + "px";
+  dash.style.height = element.clientHeight + "px";
   dash.style.left = element.offsetLeft + "px";
+  if ($(window).width() <= 767) {
+    dash.style.top = element.offsetTop + "px";
+  }
 }
 let tabSlider = new Swiper(".tab-slider", {
   speed: 800,
   slidesPerView: 1,
   allowTouchMove: false,
+  autoHeight: true,
 
   // mousewheel: true,
   // autoScrollOffset: 2,
@@ -62,7 +67,7 @@ let tabSlider = new Swiper(".tab-slider", {
   //   releaseOnEdges: true,
   // },
 });
-// let tabAccord = new Swiper(".accordion-sec .tab-slider", {});
+
 tabSlider.on("slideChange", function (innerMethods) {
   RemoveActive();
   let currentElement = listItem[innerMethods.activeIndex];
@@ -72,7 +77,9 @@ tabSlider.on("slideChange", function (innerMethods) {
 
 let allSwipersTab = document.querySelectorAll(".swiper-slide");
 // Active Setters
-setWidth(listItemActive);
+setTimeout(() => {
+  setWidth(listItemActive);
+}, 500);
 
 function selectItem(e, index) {
   RemoveActive();
@@ -107,25 +114,33 @@ listItem.forEach((item, index) => {
 let accordionTab = $(".accordion .accordion-title");
 accordionTab.each(function (index, ele) {
   $(ele).click(function (e) {
+    // tabSlider.update();
+    console.log(tabSlider);
     $(ele).toggleClass("active");
     $(ele).parent().find(".accordion-copy").slideToggle();
-    console.log($(ele).parent().find(".accordion-copy"));
+
     if ($(ele).hasClass("active")) {
       $(ele).parent().find("img").attr("src", "./assets/images/minus.svg");
+      setTimeout(function () {
+        tabSlider.update();
+      }, 500);
     } else {
       $(ele).parent().find("img").attr("src", "./assets/images/add.svg");
     }
   });
 });
 
-// Video
-$(".see-action").click(function () {
+// Product Videos
+$(".video-btn").click(function () {
+  var videoData = $(this).data("id");
   $(".video-overlay").fadeToggle();
-  $(".popup-container").fadeToggle();
-  $(".denta-video").get(0).play();
+  $(`.popup-container[data-id = "${videoData}"]`).fadeToggle();
+  $(`.popup-container[data-id = "${videoData}"] .denta-video`).get(0).play();
 });
-$(".close").click(function () {
+
+$(".close img").click(function () {
+  var videoData = $(this).data("id");
   $(".video-overlay").fadeOut();
-  $(".popup-container").fadeOut();
-  $(".denta-video").get(0).pause();
+  $(`.popup-container[data-id = "${videoData}"]`).fadeOut();
+  $(`.popup-container[data-id = "${videoData}"] .denta-video`).get(0).pause();
 });
