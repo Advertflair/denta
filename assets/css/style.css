@@ -551,157 +551,6 @@ footer li {
   font-weight: 300;
   color: #1f2734;
 }
-/* Responsive */
-@media (max-width: 991px) {
-  .burger-menu {
-    display: flex;
-    flex-basis: 20%;
-
-    justify-content: flex-end;
-  }
-  .menu-lines {
-    cursor: pointer;
-    position: relative;
-    z-index: 33;
-  }
-
-  .burger-menu span {
-    height: 4px;
-    width: 25px;
-    background-color: #1f2734;
-    display: block;
-    pointer-events: none;
-  }
-  .menu-active span {
-    background-color: #ffffff;
-  }
-  .burger-menu span.line-2 {
-    margin: 4px 0;
-  }
-  nav .overall-menus {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    height: 100vh;
-    z-index: 3;
-    width: 80%;
-    background: #171c34;
-    flex-direction: column;
-
-    justify-content: center;
-  }
-  nav .overall-menus.slide-in {
-    right: 0 !important;
-  }
-  nav .nav-button a {
-    display: block;
-    width: 100%;
-  }
-  nav .btn {
-    margin: 0 0 30px 0;
-  }
-  nav .list-menu li {
-    display: inline-block;
-    width: 100%;
-    padding: 30px;
-    text-align: center;
-  }
-  nav .list-menu li a,
-  nav .nav-button a:first-child {
-    color: #ffffff;
-    font-size: 24px;
-    text-align: center;
-  }
-  nav .nav-button a:first-child {
-    padding: 30px;
-  }
-  .nav-button {
-    display: flex;
-    flex-direction: column;
-  }
-  .overlay {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.62);
-    left: 0;
-    z-index: -1;
-    display: none;
-  }
-  nav .nav-button a.demo-btn {
-    display: inline-block;
-    width: auto;
-    margin: 30px 0;
-  }
-  nav .left-sec {
-    flex-basis: 80%;
-  }
-  nav .left-sec img {
-    width: 50%;
-  }
-
-  .banner {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-  .perio-col {
-    flex-direction: column-reverse;
-  }
-  .denta-specs {
-    margin: 0 0 30px 0;
-  }
-  .reviews {
-    flex-direction: column;
-  }
-  .section-4 .panel:nth-child(even) {
-    margin: 30px 0;
-  }
-  .foot-links {
-    flex-direction: column;
-  }
-  footer .foot-col {
-    width: 100%;
-    margin: 0 0 40px 0;
-  }
-}
-@media (max-width: 767px) {
-  br {
-    display: none;
-  }
-  nav {
-    padding: 30px 20px;
-  }
-  .section-spacing {
-    padding: 50px 20px;
-  }
-  .last-btn {
-    flex-direction: column;
-  }
-  .banner .btn {
-    padding: 0;
-    text-align: center;
-    min-height: 60px;
-  }
-  .gt-started {
-    margin: 0 0 20px 0;
-  }
-  .section-2 img {
-    width: 100%;
-  }
-  .section-2 {
-    background: none;
-  }
-  .section-2 h2 + p {
-    margin: 0 0 30px 0;
-  }
-  .section-4 {
-    background: none;
-  }
-  .perio-col {
-    margin: 30px 0 0;
-  }
-}
 
 /* Accordion */
 .accordion {
@@ -730,6 +579,7 @@ footer li {
 .accordion h4 {
   margin-bottom: 0;
   font-weight: 400;
+  flex-basis: 90%;
 }
 .accordion .accordion-copy {
   display: none;
@@ -804,4 +654,208 @@ footer li {
   width: 4%;
   cursor: pointer;
   border: 1px solid;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  br {
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+    flex-basis: 20%;
+
+    justify-content: flex-end;
+  }
+  .menu-lines {
+    cursor: pointer;
+    position: relative;
+    z-index: 33;
+  }
+
+  .burger-menu span {
+    height: 4px;
+    width: 25px;
+    background-color: #1f2734;
+    display: block;
+    pointer-events: none;
+  }
+  .menu-active span {
+    background-color: #ffffff;
+  }
+  .burger-menu span.line-2 {
+    margin: 4px 0;
+  }
+  nav .overall-menus {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 3;
+    width: 80%;
+    background: #171c34;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+  nav .overall-menus.slide-in {
+    right: 0 !important;
+  }
+  nav .nav-button a {
+    display: block;
+    width: 100%;
+  }
+  nav .btn {
+    margin: 0 0 30px 0;
+  }
+  nav .list-menu li {
+    display: inline-block;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+  nav .list-menu li a,
+  nav .nav-button a:first-child {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+  }
+  nav .nav-button a:first-child {
+    padding: 30px;
+  }
+  .nav-button {
+    display: flex;
+    flex-direction: column;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.62);
+    left: 0;
+    z-index: -1;
+    display: none;
+  }
+  nav .nav-button a.demo-btn {
+    display: inline-block;
+    width: auto;
+    margin: 30px 0;
+  }
+  nav .left-sec {
+    flex-basis: 80%;
+  }
+  nav .left-sec img {
+    width: 50%;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .perio-col {
+    flex-direction: column-reverse;
+  }
+  .denta-specs {
+    margin: 0 0 30px 0;
+  }
+  .reviews {
+    flex-direction: column;
+  }
+  .section-4 .panel:nth-child(even) {
+    margin: 30px 0;
+  }
+  .foot-links {
+    flex-direction: column;
+  }
+  footer .foot-col {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+  .popup-container .inner-pop {
+    width: 80%;
+  }
+  /* Product Page */
+  .overall-prod {
+    flex-direction: column;
+  }
+  .right-prod .cards {
+    flex-basis: 47%;
+  }
+  .left-prod {
+    margin: 20px 0;
+  }
+  .tab-items li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Resource */
+  .accordion-sec .tab-items li {
+    width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  br {
+    display: none;
+  }
+  nav {
+    padding: 30px 20px;
+  }
+  .banner {
+    padding: 140px 20px 50px 20px !important;
+  }
+  .section-spacing {
+    padding: 50px 20px;
+  }
+  .last-btn {
+    flex-direction: column;
+  }
+  .banner .btn {
+    padding: 0;
+    text-align: center;
+    min-height: 60px;
+  }
+  .gt-started {
+    margin: 0 0 20px 0;
+  }
+  .section-2 img {
+    width: 100%;
+  }
+  .section-2 {
+    background: none;
+  }
+  .section-2 h2 + p {
+    margin: 0 0 30px 0;
+  }
+  .section-4 {
+    background: none;
+  }
+  .perio-col {
+    margin: 30px 0 0;
+  }
+  .tab-items {
+    flex-direction: column;
+  }
+  .tab-items li {
+    margin: 0 0 20px 0;
+  }
+  .perio-col .panel {
+    margin: 20px 6px;
+  }
+  .headline {
+    height: 100%;
+    padding: 150px 20px 50px 20px;
+  }
+  .right-prod .cards {
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    margin: 20px !important;
+  }
+  .accordion {
+    margin: 40px 6px;
+  }
+  .accordion-sec .tab-items li {
+    width: 100%;
+  }
 }
