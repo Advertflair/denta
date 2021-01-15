@@ -78,7 +78,7 @@ a {
   text-align: center;
 }
 .section-spacing {
-  padding: 60px;
+  padding: 60px 160px;
 }
 .d-block {
   display: block !important;
@@ -124,7 +124,7 @@ a {
 
 /* Header */
 nav {
-  padding: 30px 60px 16px 60px;
+  padding: 30px 160px 16px 160px;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -185,14 +185,15 @@ nav .btn:hover {
 /* Banner */
 .banner {
   align-items: center;
-  height: 100vh;
-  padding: 180px 60px 60px;
+  height: 90vh;
+  padding: 125px 160px 60px;
 }
 .banner .left-content {
-  flex-basis: 60%;
+  flex-basis: 50%;
+  margin: 0 40px 0 0;
 }
 .banner .right-img {
-  flex-basis: calc(100% - 60%);
+  flex-basis: calc(100% - 50%);
   position: relative;
 }
 .banner h1 {
@@ -248,7 +249,7 @@ nav .btn:hover {
 }
 .banner .btn {
   padding: 10px 25px;
-  flex-basis: 35%;
+  flex-basis: 45%;
   justify-content: center;
 }
 .banner .left-content p {
@@ -279,11 +280,11 @@ nav .btn:hover {
 }
 /* Section 2 */
 .section-2 {
-  background-image: url(../images/curve-1.png),
-    url(../images/right-triangle.svg), url(../images/sec-2-left.svg);
-  background-position: 50% 0px, 113%, -5% 80%;
+  background-image: url(../images/right-triangle.svg),
+    url(../images/sec-2-left.svg);
+  background-position: 113% 0, -5% 80%;
   background-repeat: no-repeat;
-  background-size: cover, 21%, 10%;
+  background-size: 21%, 10%;
 }
 .section-2 img {
   width: 50%;
@@ -413,6 +414,13 @@ footer li {
 }
 .headline h1 {
   margin: 0;
+  font-weight: 300;
+}
+.headline h1 b {
+  font-weight: 400;
+}
+.headline h1 span {
+  color: #20b0a9;
 }
 .tab-sec,
 .accordion-sec {
@@ -424,9 +432,7 @@ footer li {
 .headline p {
   margin: 30px 0;
 }
-.headline .gradient-btn:hover {
-  background-size: 100% 0%;
-}
+
 .gradient-btn {
   background: rgb(62, 195, 178);
   background-size: 300% 100%;
@@ -438,11 +444,11 @@ footer li {
     rgb(53, 126, 104)
   );
   color: #ffffff;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out !important;
 }
 .gradient-btn:hover {
   background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out !important;
 }
 .grad-play-btn {
   align-items: center;
@@ -494,11 +500,14 @@ footer li {
   justify-content: center;
 }
 .left-prod {
-  flex-basis: 40%;
+  flex-basis: 46%;
   margin: 0 40px 0 0;
 }
 .left-prod h2 b {
   font-weight: 400;
+}
+.left-prod h2 {
+  font-weight: 300;
 }
 .left-prod figure {
   margin: 50px 0;
@@ -795,6 +804,21 @@ footer li {
   .accordion-sec .tab-items li {
     width: 20%;
   }
+  .section-spacing {
+    padding: 60px;
+  }
+  .right-img {
+    padding: 120px 0 60px 0;
+  }
+  nav {
+    padding: 30px 60px 16px 60px;
+  }
+  .section-2 img {
+    width: 80%;
+  }
+  .section-2 h2 + p {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 767px) {
   br {
@@ -834,6 +858,7 @@ footer li {
   }
   .perio-col {
     margin: 30px 0 0;
+    flex-direction: column;
   }
   .tab-items {
     flex-direction: column;
@@ -858,5 +883,11 @@ footer li {
   }
   .accordion-sec .tab-items li {
     width: 100%;
+  }
+  .overall-tabs {
+    display: none;
+  }
+  .banner .right-img {
+    margin: 0 0 30px 0;
   }
 }
