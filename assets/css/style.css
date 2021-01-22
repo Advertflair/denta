@@ -125,7 +125,8 @@ a {
 
 /* Header */
 nav {
-  padding: 30px 160px 16px 160px;
+     box-shadow: 0 5px 6px -6px rgba(0, 0, 0, 0.6);
+    padding: 16px 0;
   justify-content: space-between;
   align-items: center;
   position: fixed;
